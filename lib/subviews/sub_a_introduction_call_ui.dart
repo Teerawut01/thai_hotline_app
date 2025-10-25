@@ -10,9 +10,9 @@ class SubAIntroductionCallUi extends StatefulWidget {
 class _SubAIntroductionCallUiState extends State<SubAIntroductionCallUi> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 230, 232, 246),
-      body: Center(
+    return Container(
+      color: const Color.fromARGB(255, 230, 232, 246),
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -28,35 +28,36 @@ class _SubAIntroductionCallUiState extends State<SubAIntroductionCallUi> {
             ),
             SizedBox(height: 40),
             Padding(
-              padding: EdgeInsetsGeometry.symmetric(
-                horizontal: 50,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 50),
               child: Text.rich(
                 TextSpan(
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                   children: [
                     TextSpan(
-                        text: 'เมื่อต้องเดินทางทั้งในเมืองออกต่างจังหวัด\n     '
-                            '         จะใกล้หรือไกลเพียงใด\n'
-                            '   สอบถามข้อมูลการเดินทาง การจราจร\n'
-                            '       ทางด่วน ทางหลัก ทางรอง\n'
-                            '       เส้นทางเลี่ยงการจราจรติดขัด\n'
-                            'ข้อมูลรถทัวร์ รถไฟ ขสมก. BTS MRT\n '
-                            '               ชักช้าอยู่ใย '),
-                    TextSpan(text: 'โทรเลย!!!', style: TextStyle(color: Colors.red)),
+                      text: 'เมื่อต้องเดินทางทั้งในเมืองออกต่างจังหวัด\n'
+                          '               จะใกล้หรือไกลเพียงใด\n'
+                          '    สอบถามข้อมูลการเดินทาง การจราจร\n'
+                          '            ทางด่วน ทางหลัก ทางรอง\n'
+                          '         เส้นทางเลี่ยงการจราจรติดขัด\n'
+                          '     ข้อมูลรถทัวร์ รถไฟ ขสมก. BTS MRT\n'
+                          '                 ชักช้าอยู่ใย ',
+                    ),
+                    TextSpan(
+                      text: 'โทรเลย!!!',
+                      style: TextStyle(color: Colors.red),
+                    ),
                   ],
                 ),
               ),
             ),
-            SizedBox(
-              height: 40,
-            ),
+            SizedBox(height: 40),
             Text(
-              '   สายด่วน\nการเดินทาง',
+              'สายด่วน\nการเดินทาง',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 30,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thai_hotline_app/subviews/sub_a_introduction_call_ui.dart';
+import 'package:thai_hotline_app/views/home_ui.dart';
+import 'package:thai_hotline_app/views/sceen_ui.dart';
 
 class IntroductionCallUi extends StatefulWidget {
   const IntroductionCallUi({super.key});
@@ -15,7 +17,7 @@ class _IntroductionCallUiState extends State<IntroductionCallUi> {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => SubAIntroductionCallUi()),
+        MaterialPageRoute(builder: (context) => SceenUi()),
       );
     });
     super.initState();

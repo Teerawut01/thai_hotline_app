@@ -4,6 +4,7 @@ import 'package:thai_hotline_app/subviews/sub_b_home_ui.dart';
 import 'package:thai_hotline_app/subviews/sub_c_home_ui.dart';
 import 'package:thai_hotline_app/subviews/sub_c_introduction_call_ui.dart';
 import 'package:thai_hotline_app/subviews/sub_d_home_ui.dart';
+import 'package:thai_hotline_app/views/about_ui.dart';
 
 class HomeUi extends StatefulWidget {
   const HomeUi({super.key});
@@ -36,6 +37,20 @@ class _HomeUiState extends State<HomeUi> {
           ),
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.info,
+              color: Colors.grey,
+            ),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AboutUi(),
+              ),
+            ),
+          ),
+        ],
       ),
       body: showPage[index],
       bottomNavigationBar: BottomNavigationBar(

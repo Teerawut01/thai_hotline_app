@@ -10,13 +10,13 @@ class SubDIntroductionCallUi extends StatefulWidget {
 class _SubDIntroductionCallUiState extends State<SubDIntroductionCallUi> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 230, 232, 246),
-      body: Center(
+    return Container(
+      color: const Color.fromARGB(255, 230, 232, 246),
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
@@ -26,36 +26,38 @@ class _SubDIntroductionCallUiState extends State<SubDIntroductionCallUi> {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Padding(
-              padding: EdgeInsetsGeometry.symmetric(
-                horizontal: 50,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 50),
               child: Text.rich(
                 TextSpan(
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                   children: [
+                    const TextSpan(
+                      text: 'น้ำไม่ไหล\n'
+                          'ไฟฟ้าดับ\n'
+                          'โทรไม่ติด\n'
+                          'อินเตอร์เน็ตมีปัญหา\n'
+                          'เข้า Social Media ไม่ได้\n'
+                          'รอไม่ได้ ',
+                    ),
                     TextSpan(
-                        text: '              น้ำไม่ไหล\n'
-                            '              ไฟฟ้าดับ\n'
-                            '             โทรไม่ติด\n'
-                            '    อินเตอร์เน็ตมีปัญหา\n'
-                            '  เข้า Social Media ไม่ได้\n'
-                            '      รอไม่ได้ '),
-                    TextSpan(text: 'โทรเลย!!!', style: TextStyle(color: Colors.red)),
+                      text: 'โทรเลย!!!',
+                      style: const TextStyle(color: Colors.red),
+                    ),
                   ],
                 ),
+                textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(
-              height: 40,
-            ),
-            Text(
-              '   สายด่วน\nสาธารณูปโภค',
+            const SizedBox(height: 40),
+            const Text(
+              'สายด่วน\nสาธารณูปโภค',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 30,

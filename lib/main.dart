@@ -6,6 +6,7 @@ import 'package:thai_hotline_app/subviews/sub_a_introduction_call_ui.dart';
 import 'package:thai_hotline_app/subviews/sub_b_introduction_call_ui.dart';
 import 'package:thai_hotline_app/subviews/sub_c_introduction_call_ui.dart';
 import 'package:thai_hotline_app/subviews/sub_d_introduction_call_ui.dart';
+import 'package:thai_hotline_app/views/about_ui.dart';
 import 'package:thai_hotline_app/views/home_ui.dart';
 import 'package:thai_hotline_app/views/introduction_call_ui.dart';
 
@@ -27,7 +28,7 @@ class _ThaiHotlineAppState extends State<ThaiHotlineApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeUi(),
+      home: IntroductionCallUi(),
       theme: ThemeData(
         textTheme: GoogleFonts.procionoTextTheme(
           Theme.of(context).textTheme,

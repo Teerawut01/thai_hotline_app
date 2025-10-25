@@ -10,13 +10,13 @@ class SubCIntroductionCallUi extends StatefulWidget {
 class _SubCIntroductionCallUiState extends State<SubCIntroductionCallUi> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 230, 232, 246),
-      body: Center(
+    return Container(
+      color: const Color.fromARGB(255, 230, 232, 246),
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
@@ -26,37 +26,39 @@ class _SubCIntroductionCallUiState extends State<SubCIntroductionCallUi> {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Padding(
-              padding: EdgeInsetsGeometry.symmetric(
-                horizontal: 50,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 50),
               child: Text.rich(
                 TextSpan(
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                   children: [
+                    const TextSpan(
+                      text: 'เมื่อเงินคือสิ่งสำคัญสำหรับการดำเนินชีวิต\n'
+                          'กิน เที่ยว ซื้อสินค้า\n'
+                          'การเดินทาง การรักษาพยาบาล\n'
+                          'หรือโดนเหตุมิจฉาชีพ\n'
+                          'แก๊งคอลเซ็นเตอร์หลอกลวง\n'
+                          'สามารถติดต่อธนาคารโดยตรง\n'
+                          'ได้เลย ',
+                    ),
                     TextSpan(
-                        text: 'เมื่อเงินคือสิ่งสำคัญสำหรับการดำเนินชีวิต\n     '
-                            '            กิน เที่ยว ซื้อสินค้า\n'
-                            '         การเดินทาง การรักษาพยาบาล\n'
-                            '              หรือโดนเหตุมิจฉาชีพ\n'
-                            '        แก๊งตอลเซ็นเตอร์หลอกลวง\n'
-                            '      สามารถติดต่อธนาคารโดยตรง\n '
-                            '                  ได้เลย '),
-                    TextSpan(text: 'โทรเลย!!!', style: TextStyle(color: Colors.red)),
+                      text: 'โทรเลย!!!',
+                      style: const TextStyle(color: Colors.red),
+                    ),
                   ],
                 ),
+                textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(
-              height: 40,
-            ),
-            Text(
+            const SizedBox(height: 40),
+            const Text(
               'สายด่วน\nธนาคาร',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 30,
