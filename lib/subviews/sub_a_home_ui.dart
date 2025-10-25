@@ -72,78 +72,10 @@ class _SubAHomeUiState extends State<SubAHomeUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 230, 232, 246),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 142, 150, 207),
-        title: Text(
-          'สายด่วน THAILAND',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        centerTitle: true,
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: const Color.fromARGB(255, 192, 196, 221),
-        selectedItemColor: Colors.grey,
-        unselectedItemColor: Colors.black,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        items: [
-          BottomNavigationBarItem(
-            icon: ClipRRect(
-              borderRadius: BorderRadius.circular(100),
-              child: Image.asset(
-                'assets/images/passport01.jpg',
-                width: 30,
-                height: 30,
-                fit: BoxFit.cover,
-              ),
-            ),
-            label: 'การเดินทาง',
-          ),
-          BottomNavigationBarItem(
-            icon: ClipRRect(
-              borderRadius: BorderRadius.circular(100),
-              child: Image.asset(
-                'assets/images/police01.jpg',
-                width: 30,
-                height: 30,
-                fit: BoxFit.cover,
-              ),
-            ),
-            label: 'อุบัติเหตุ',
-          ),
-          BottomNavigationBarItem(
-            icon: ClipRRect(
-              borderRadius: BorderRadius.circular(100),
-              child: Image.asset(
-                'assets/images/bank01.jpg',
-                width: 30,
-                height: 30,
-                fit: BoxFit.cover,
-              ),
-            ),
-            label: 'ธนาคาร',
-          ),
-          BottomNavigationBarItem(
-            icon: ClipRRect(
-              borderRadius: BorderRadius.circular(100),
-              child: Image.asset(
-                'assets/images/sunrise01.jpg',
-                width: 30,
-                height: 30,
-                fit: BoxFit.cover,
-              ),
-            ),
-            label: 'สาธารณูปโภค',
-          ),
-        ],
-      ),
       body: Center(
         child: Column(
           children: [
+            SizedBox(height: 10),
             Text(
               '   สายด่วน\nการเดินทาง',
               style: TextStyle(
@@ -152,6 +84,7 @@ class _SubAHomeUiState extends State<SubAHomeUi> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(height: 10),
             Image.asset(
               'assets/images/passport01.jpg',
               width: MediaQuery.of(context).size.width,
