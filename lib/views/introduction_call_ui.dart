@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thai_hotline_app/subviews/sub_a_introduction_call_ui.dart';
 
 class IntroductionCallUi extends StatefulWidget {
   const IntroductionCallUi({super.key});
@@ -9,58 +10,58 @@ class IntroductionCallUi extends StatefulWidget {
 
 class _IntroductionCallUiState extends State<IntroductionCallUi> {
   @override
+  void initState() {
+    // โค้ดหน่วงเวลา และเปิดไปที่หน้าจอ SubAintroductionCallUi
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => SubAIntroductionCallUi()),
+      );
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: const Color.fromARGB(255, 142, 150, 207),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 20),
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
                 'assets/images/passport01.jpg',
-                width: 300,
-                height: 300,
+                width: MediaQuery.of(context).size.width * 0.5,
+                height: MediaQuery.of(context).size.width * 0.5,
                 fit: BoxFit.cover,
               ),
             ),
             SizedBox(height: 40),
-            Padding(
-              padding: EdgeInsetsGeometry.symmetric(
-                horizontal: 50,
-              ),
-              child: Text.rich(
-                TextSpan(
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  children: [
-                    TextSpan(
-                        text: 'เมื่อต้องเดินทางทั้งในเมืองออกต่างจังหวัด\n     '
-                            '         จะใกล้หรือไกลเพียงใด\n'
-                            '   สอบถามข้อมูลการเดินทาง การจราจร\n'
-                            '       ทางด่วน ทางหลัก ทางรอง\n'
-                            '       เส้นทางเลี่ยงการจราจรติดขัด\n'
-                            'ข้อมูลรถทัวร์ รถไฟ ขสมก. BTS MRT\n '
-                            '               ชักช้าอยู่ใย '),
-                    TextSpan(text: 'โทรเลย!!!', style: TextStyle(color: Colors.red)),
-                  ],
-                ),
+            Text(
+              '   สายด่วน THAILAND',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
-              height: 40,
+            SizedBox(height: 40),
+            CircularProgressIndicator(color: Colors.white),
+            SizedBox(height: 40),
+            Text(
+              'Createst by Teerawut.P SAU',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
             ),
             Text(
-              '   สายด่วน\nการเดินทาง',
+              'Copyright © 2025',
               style: TextStyle(
-                color: Colors.black,
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 16,
               ),
             ),
           ],
